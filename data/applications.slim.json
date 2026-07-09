@@ -1,0 +1,1088 @@
+[
+  {
+    "name": "Oracle BI Cloud",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Damage Assessor Resource Tracking System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Enterprise Data & Analytics"
+  },
+  {
+    "name": "EM ISO Reporting",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Electric Scheduling System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Aligne Fuels",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "GAN Integrity",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "EH&S KPI Web Application",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "EH&S JSSE Web Application",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "EH&S Design Review Web Application",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Steam Web Self Service",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Steam Meter Reading",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Billing"
+  },
+  {
+    "name": "Rate Case EPBCS",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Building Energy Usage Portal",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Demand Management Tracking System Interface",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "EHS Backend Services",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "EHS PAP Mobile Application",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "EHS JSSE Mobile Application",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Retail Choice CSR Information System - CSR Browser",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Retail Choice Dashboard",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Password Manager Web",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Kofax",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "UC4 Atomic",
+    "businessCriticality": "1 - Gold",
+    "tier": "Gold",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "IPM Web Center",
+    "businessCriticality": "1 - Gold",
+    "tier": "Gold",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Accounts Payable Online Internet",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Accounts Reconciliation Cloud Service",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Active Directory Group Membership",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Adept",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Admin Rights Management System (NewARMS)",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Administrative Authorization Application",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Aligne",
+    "businessCriticality": "1 - Gold",
+    "tier": "Gold",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "ALLEGRO - Corporate Risk Management System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "ARCOS CrewCallOut",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "IT OT - Control Center"
+  },
+  {
+    "name": "BI - IRIS Data Warehouse",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "BI - Meter Reading Data Warehouse",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "BIX Reporting - Electric Operations",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Care Management System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Chromeleon",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Clear Access Tracking System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "CNGstation",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Common Data System : CDS",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Computer Access Profile System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Computer Cost Central",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Computer Security Access Request",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Conference Center Reservation System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Constituent Tracking",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Construction Mgt Payment/Support System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Construction Permit Tracking System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Contractor Contact",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Cority - EWC",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Cority Industrial Hygiene (was Medgate)",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Corporate Customer Group",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "CSR AMI Meter Portal",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Customer Usage System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Cycle PET Interface System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Digital Asset Management System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "DigitalID",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Dispatcher Generation Planning System (Day Ahead Op Plan)",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Dynamic Load Shape",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "EBS Financials",
+    "businessCriticality": "1 - Gold",
+    "tier": "Gold",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "EBS Supply Chain Management",
+    "businessCriticality": "1 - Gold",
+    "tier": "Gold",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "EDI Portal",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "eDocs",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "EH&S Remediation Site Mapping",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Electric Information Management System - Pole Attachments",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Electric Information Management System - Substation Information",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Electric Information Management System Lite",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Electric Information Management System v1",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Electronic Forms System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Employee Authorization System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Employee Data Warehouse",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Employee Payroll System - Special Payments",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Employees Photo",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Energy Management Analytics",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Environmental Management Information System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Environmental, Health, and Safety Plan",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "eTrain LMS management system",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "eWage",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "FFSFUEL",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Field Programmable Electronic Terminal (FPET)",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Fleet Management System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "FTP Manager",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Gas Incident Management System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Gas Leak Map",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Gas Ops Fuse to Fuser",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Gas Reporting System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Gas Work Tracker",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Grid Coordinate System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "GroupID",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Hitachi PW Manager",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Hurricane Inundation Map Application",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "IT OT - Control Center"
+  },
+  {
+    "name": "ID Card and Access Management",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "iLIMS Laboratory Information Management System Web Reporting",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Investigation Tracking System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "IRIS View (Intelligent Routing Info System)",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Journal Voucher Approval Control",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Laboratory Information Management System Replacement",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "LawManager (Matter Management System)",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "LobbyWorks",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Lynx Duress and Emergency Notification System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Manager Approval for Sign",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "DataSplice",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Maximo Work and Asset Management",
+    "businessCriticality": "1 - Gold",
+    "tier": "Gold",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Meter Lock Key System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "MetrixIDR",
+    "businessCriticality": "1 - Gold",
+    "tier": "Gold",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "MSA Link Pro",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Municipal Streetlights Portal",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "MV90 - Electric",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "NAVEX - Ethics Point",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "netUpdate",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "New Westchester Street Light Billing System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "NOC Web Services",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "NYC Street Lighting Billing System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "O & R EDI Test Tool",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "O&R ARCOS - Safety",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "O&R Recycling Information System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "O&R Revenue Protection",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "OPEX EDW Interface",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "OR_Gas Leak Map",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Paving System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Payment Processing - Mavro",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Permit Tracking Application Replacement",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Personal Car Mileage Reimbursement",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Plant Unitization",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "PoliteMail",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "PowerPlan",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Pro-Watch",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Public Assistance Central",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Public Improvement Utility Map Request System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "QuestionMark",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Random Drug Testing",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "RecordsSystem",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "O&R Day Ahead Forecast Demand",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Retail Access Information System - Batch",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Retail Access Information System - Internet",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Retail Choice EDI Test Tool",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Retail Choice Information System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Retail Choice Information System - EDAP Service Provider",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "RevDemo",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "RSA Archer GRC",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Scanning/Coding (Law Department)",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Scheduled Interruption Reporting System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "SCORMrte",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "SENSITIVE COMMUNICATIONS",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Shared Functions",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Sick Absence Registry VRU System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Sick Pay Qualification Process",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Simple Domain Administration Utility",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Single Sign-On",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "STAT - Change Control Application",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Steam Meter Calibration",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Steam Online",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Substation Dashboard",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Substation Test Results",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Supply Chain (Internet)",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Supply Chain (Intranet)",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Supply Chain Legacy Report System (J.D. Edwards (JDE))",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Tableau Server",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Take Home Vehicle",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Talemetry Apply",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "TeamMate",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "ThinkSmart Automation Platform (TAP)",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Time Track",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "TLC Delegation of Authority",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "TLC Portal",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "TLCWS",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Transmission Owners Data Reporting System",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Transmission Switching System (iTOA)",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Transportation Customer Info System - Batch",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Transportation Customer Information System - Next Generation",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Travel",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "TSP - Training Summary Portal",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Tuition Aid Self Service (TASS) - Web",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "webWMS - O&R",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Wetlands & Water Bodies Map Application",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Work Information Notice System",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "Customer Experience"
+  },
+  {
+    "name": "Work Management System - O&R",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Work Management System - SQL Server SSIS",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Work Tracking/ Mapping Database System ( http://wtwebapp )",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "WAMS"
+  },
+  {
+    "name": "Financial Consolidation and Close Cloud Service (FCCS)",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Enterprise Planning and Budgeting Cloud Service (EPBCS)",
+    "businessCriticality": "2 - Silver",
+    "tier": "Silver",
+    "tower": "Shared Services"
+  },
+  {
+    "name": "Webfocus-Administration",
+    "businessCriticality": "3 - Bronze",
+    "tier": "Bronze",
+    "tower": "WAMS"
+  }
+]

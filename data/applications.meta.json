@@ -1,0 +1,29 @@
+{
+  "source": "cmdb_ci_service_Nov.xlsx (Downloads)",
+  "sourceNote": "full export",
+  "extractedRows": 181,
+  "columnCount": 3,
+  "columns": [
+    "Name",
+    "Business criticality",
+    "Tower"
+  ],
+  "tierDistribution": {
+    "Silver": 61,
+    "Bronze": 113,
+    "Gold": 7
+  },
+  "businessCriticalityDistribution": {
+    "2 - Silver": 61,
+    "3 - Bronze": 113,
+    "1 - Gold": 7
+  },
+  "towerDistribution": {
+    "Shared Services": 102,
+    "Enterprise Data & Analytics": 1,
+    "Customer Experience": 39,
+    "Customer Billing": 1,
+    "WAMS": 36,
+    "IT OT - Control Center": 2
+  }
+}

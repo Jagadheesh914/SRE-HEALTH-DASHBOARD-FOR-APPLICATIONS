@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-grotesk: "Space Grotesk", var(--font-inter);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(70% 50% at 10% 0%, rgba(54, 192, 207, 0.10) 0%, transparent 60%),
+    radial-gradient(60% 50% at 100% 6%, rgba(0, 153, 216, 0.08) 0%, transparent 55%),
+    linear-gradient(180deg, #f6fafd 0%, #eef4fb 100%);
+  color: #0a1a3d;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Thin, blue-tinted scrollbars to match the light theme */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(60, 102, 206, 0.28) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(60, 102, 206, 0.25);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(60, 102, 206, 0.45);
+}
+
+@layer components {
+  .panel {
+    @apply rounded-xl border border-panel-border bg-panel shadow-panel;
+  }
+  .panel-title {
+    @apply font-display text-[13px] font-bold text-ink;
+  }
+  .ctrl {
+    @apply flex items-center gap-2 whitespace-nowrap rounded-lg border border-panel-border
+           bg-panel px-3 py-2 text-xs text-ink;
+  }
+  .badge {
+    @apply inline-block rounded-full px-2.5 py-0.5 text-[10px] font-bold;
+  }
+}
