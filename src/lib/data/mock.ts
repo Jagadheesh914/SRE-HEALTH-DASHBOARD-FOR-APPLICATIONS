@@ -58,6 +58,33 @@ export const MOCK_DASHBOARD: DashboardData = {
     { app: "Search Service", availability: "99.20%", slo: "92.7%", errorRate: "1.05%", p95Latency: "480 ms", status: "Critical" },
     { app: "Recommendation Service", availability: "98.90%", slo: "91.5%", errorRate: "1.20%", p95Latency: "500 ms", status: "Critical" },
   ],
+  appsByTier: [
+    { name: "Gold", count: 8, color: "#e8a33d" },
+    { name: "Silver", count: 10, color: "#8494b8" },
+    { name: "Bronze", count: 6, color: "#c67b45" },
+  ],
+  appsByAvailability: [
+    { name: "Healthy", count: 15, color: "#16a34a" },
+    { name: "Warning", count: 6, color: "#d97706" },
+    { name: "Critical", count: 3, color: "#e0384a" },
+  ],
+  healthOps: [
+    { app: "Checkout Service", availability: "99.98%", jobStatus: "Healthy", serviceStatus: "Healthy", healthCheckStatus: "Healthy", status: "Healthy" },
+    { app: "User Service", availability: "99.95%", jobStatus: "Healthy", serviceStatus: "Healthy", healthCheckStatus: "Healthy", status: "Healthy" },
+    { app: "Order Service", availability: "99.93%", jobStatus: "Healthy", serviceStatus: "Warning", healthCheckStatus: "Healthy", status: "Healthy" },
+    { app: "Payment Service", availability: "99.81%", jobStatus: "Warning", serviceStatus: "Healthy", healthCheckStatus: "Warning", status: "Warning" },
+    { app: "Inventory Service", availability: "99.70%", jobStatus: "Healthy", serviceStatus: "Warning", healthCheckStatus: "Warning", status: "Warning" },
+    { app: "Notification Service", availability: "99.50%", jobStatus: "Critical", serviceStatus: "Warning", healthCheckStatus: "Critical", status: "Critical" },
+    { app: "Search Service", availability: "99.20%", jobStatus: "Warning", serviceStatus: "Critical", healthCheckStatus: "Critical", status: "Critical" },
+    { app: "Recommendation Service", availability: "98.90%", jobStatus: "Critical", serviceStatus: "Critical", healthCheckStatus: "Warning", status: "Critical" },
+  ],
+  criticalIncidents: [
+    { id: "inc1", severity: "P1", text: "Notification Service — high error rate, connection-pool exhaustion", time: "5m ago" },
+    { id: "inc2", severity: "P2", text: "Search Service — P95 latency > 500ms after May 17 deploy", time: "22m ago" },
+    { id: "inc3", severity: "P1", text: "Payment Service — intermittent 5xx on /checkout/submit", time: "1h ago" },
+    { id: "inc4", severity: "P2", text: "Recommendation Service — availability below target", time: "2h ago" },
+    { id: "inc5", severity: "P2", text: "Order Service — elevated DB connection errors", time: "3h ago" },
+  ],
   incidentsBySeverity: [
     { severity: "P1", label: "P1 - Critical", count: 7, pct: "31.8%" },
     { severity: "P2", label: "P2 - High", count: 15, pct: "68.2%" },
@@ -98,6 +125,11 @@ export const MOCK_DASHBOARD: DashboardData = {
     delta: "1.2%",
     series: ts("%", [3.5, 4.2, 5.8, 4.4, 6.2, 4.6, 5.6], 0, 10),
   },
+  changeSuccessRate: {
+    value: "94.4%",
+    delta: "1.2%",
+    series: ts("%", [96.5, 95.8, 94.2, 95.6, 93.8, 95.4, 94.4], 85, 100),
+  },
   alerts: [
     { id: "a1", severity: "P1", text: "High Error Rate in Notification Service", time: "5m ago" },
     { id: "a2", severity: "P2", text: "P95 Latency > 500ms in Search Service", time: "15m ago" },
@@ -108,21 +140,4 @@ export const MOCK_DASHBOARD: DashboardData = {
 };
 
 /** Adaptive-UI placeholder: proactive insights an agent would surface. */
-export const MOCK_INSIGHTS: AgentInsight[] = [
-  {
-    id: "i1",
-    kind: "risk",
-    title: "Search Service SLO burn-rate elevated",
-    detail:
-      "At the current error budget consumption rate, Search Service will breach its 99% SLO in ~2.3 days. Latency P95 crossed 480ms after the May 17 deploy.",
-    promote: ["latency", "slo"],
-  },
-  {
-    id: "i2",
-    kind: "anomaly",
-    title: "3 alerts correlate to one incident",
-    detail:
-      "High error rate, DB connection errors, and elevated CPU on App Node 3 appear to share a root cause (connection-pool exhaustion). Grouped into a single narrative.",
-    promote: ["alerts", "err"],
-  },
-];
+export const MOCK_INSIGHTS: AgentInsight[] = [];

@@ -19,20 +19,22 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-export const NAV: { href: string; label: string; icon: LucideIcon }[] = [
+// NOTE: entries with `hidden: true` are kept for future reference but are
+// not rendered in the sidebar navigation.
+export const NAV: { href: string; label: string; icon: LucideIcon; hidden?: boolean }[] = [
   { href: "/", label: "Overview", icon: Activity },
-  { href: "/applications", label: "Applications", icon: LayoutGrid },
-  { href: "/slos", label: "SLIs / SLOs", icon: Target },
-  { href: "/alerts", label: "Alerts", icon: Bell },
-  { href: "/incidents", label: "Incidents", icon: AlertTriangle },
-  { href: "/errors", label: "Error Tracking", icon: Bug },
-  { href: "/performance", label: "Performance", icon: LineChart },
-  { href: "/availability", label: "Availability", icon: ShieldCheck },
-  { href: "/infrastructure", label: "Infrastructure", icon: Server },
-  { href: "/capacity", label: "Capacity", icon: BarChart3 },
-  { href: "/change-health", label: "Change Health", icon: GitCompare },
-  { href: "/reports", label: "Reports", icon: FileText },
-  { href: "/settings", label: "Settings", icon: Settings },
+  { href: "/applications", label: "Applications", icon: LayoutGrid, hidden: true },
+  { href: "/slos", label: "SLIs / SLOs", icon: Target, hidden: true },
+  { href: "/alerts", label: "Alerts", icon: Bell, hidden: true },
+  { href: "/incidents", label: "Incidents", icon: AlertTriangle, hidden: true },
+  { href: "/errors", label: "Error Tracking", icon: Bug, hidden: true },
+  { href: "/performance", label: "Performance", icon: LineChart, hidden: true },
+  { href: "/availability", label: "Availability", icon: ShieldCheck, hidden: true },
+  { href: "/infrastructure", label: "Infrastructure", icon: Server, hidden: true },
+  { href: "/capacity", label: "Capacity", icon: BarChart3, hidden: true },
+  { href: "/change-health", label: "Change Health", icon: GitCompare, hidden: true },
+  { href: "/reports", label: "Reports", icon: FileText, hidden: true },
+  { href: "/settings", label: "Settings", icon: Settings, hidden: true },
 ];
 
 export function Sidebar() {
@@ -44,7 +46,7 @@ export function Sidebar() {
         <span className="font-display text-[15px] font-bold text-ink">SRE</span>
       </div>
       <nav className="flex flex-col gap-0.5">
-        {NAV.map(({ href, label, icon: Icon }) => {
+        {NAV.filter((item) => !item.hidden).map(({ href, label, icon: Icon }) => {
           const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
           return (
             <Link

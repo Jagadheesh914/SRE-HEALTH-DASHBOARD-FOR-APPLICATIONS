@@ -25,9 +25,16 @@ const ICONS: Record<string, LucideIcon> = {
   dep: Rocket,
 };
 
-export function KpiRow({ kpis }: { kpis: Kpi[] }) {
+export function KpiRow({
+  kpis,
+  gridClassName = "grid-cols-2 sm:grid-cols-3 xl:grid-cols-7",
+}: {
+  kpis: Kpi[];
+  /** Tailwind grid-cols classes controlling how many KPIs sit per row. */
+  gridClassName?: string;
+}) {
   return (
-    <div className="mb-3 grid grid-cols-2 gap-2.5 sm:grid-cols-3 xl:grid-cols-7">
+    <div className={`mb-3 grid gap-2.5 ${gridClassName}`}>
       {kpis.map((k) => {
         const Icon = ICONS[k.key] ?? LayoutGrid;
         const color = ACCENTS[k.accent];

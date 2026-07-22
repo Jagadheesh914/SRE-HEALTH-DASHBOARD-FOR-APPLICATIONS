@@ -10,9 +10,17 @@ const SEV_COLOR: Record<string, string> = {
   P4: "#16a34a",
 };
 
-export function AlertsPanel({ alerts }: { alerts: AlertItem[] }) {
+export function AlertsPanel({
+  alerts,
+  title = "Alerts",
+  linkText = "View all alerts →",
+}: {
+  alerts: AlertItem[];
+  title?: string;
+  linkText?: string;
+}) {
   return (
-    <Panel title="Alerts">
+    <Panel title={title}>
       <div className="flex-1">
         {alerts.map((a) => (
           <div
@@ -31,7 +39,7 @@ export function AlertsPanel({ alerts }: { alerts: AlertItem[] }) {
         ))}
       </div>
       <a href="#" className="mt-2.5 flex-shrink-0 text-[11.5px] font-semibold text-brand-blue">
-        View all alerts →
+        {linkText}
       </a>
     </Panel>
   );

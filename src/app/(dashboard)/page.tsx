@@ -5,7 +5,7 @@ import { OverviewView } from "@/components/views/OverviewView";
 import { LoadingGrid } from "@/components/views/LoadingGrid";
 
 export default function OverviewPage() {
-  const { data, loading, insights, ask } = useAppShell();
+  const { data, loading, insights } = useAppShell();
   if (loading || !data) return <LoadingGrid />;
-  return <OverviewView data={data} insights={insights} onAsk={ask} />;
+  return <OverviewView data={data} insights={insights} />;
 }

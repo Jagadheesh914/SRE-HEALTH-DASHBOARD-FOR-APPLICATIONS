@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, AlertTriangle, Activity, Info, X } from "lucide-react";
+import { AlertTriangle, Activity, Info, X } from "lucide-react";
 import { useState } from "react";
 import type { AgentInsight } from "@/lib/types";
 
@@ -17,10 +17,8 @@ const KIND_META = {
  */
 export function InsightBanner({
   insights,
-  onAsk,
 }: {
   insights: AgentInsight[];
-  onAsk: (question: string) => void;
 }) {
   const [dismissed, setDismissed] = useState<string[]>([]);
   const visible = insights.filter((i) => !dismissed.includes(i.id));
@@ -54,13 +52,6 @@ export function InsightBanner({
                 <span className="truncate text-[12px] font-semibold text-ink">{ins.title}</span>
               </div>
               <p className="mt-1 text-[11.5px] leading-snug text-ink-muted">{ins.detail}</p>
-              <button
-                onClick={() => onAsk(`Explain this in detail: ${ins.title}`)}
-                className="mt-1.5 flex items-center gap-1 text-[11px] font-semibold text-brand-blue hover:underline"
-              >
-                <Sparkles className="h-3 w-3" />
-                Ask the agent
-              </button>
             </div>
             <button
               onClick={() => setDismissed((d) => [...d, ins.id])}

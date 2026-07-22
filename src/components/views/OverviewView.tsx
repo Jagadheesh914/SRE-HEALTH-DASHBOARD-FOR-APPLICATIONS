@@ -1,16 +1,12 @@
 "use client";
 
 import { KpiRow } from "@/components/dashboard/KpiRow";
-import { SloPanel } from "@/components/dashboard/SloPanel";
 import { TrendPanel } from "@/components/dashboard/TrendPanel";
-import { HealthTable } from "@/components/dashboard/HealthTable";
+import { CategoryDonut } from "@/components/dashboard/CategoryDonut";
+import { HealthByApplication } from "@/components/dashboard/HealthByApplication";
 import { IncidentsDonut } from "@/components/dashboard/IncidentsDonut";
-import { IncidentsOverTime } from "@/components/dashboard/IncidentsOverTime";
-import { TopErrorTypes } from "@/components/dashboard/TopErrorTypes";
-import { InfraHealth } from "@/components/dashboard/InfraHealth";
-import { ApdexGauge } from "@/components/dashboard/ApdexGauge";
-import { SlowTransactions } from "@/components/dashboard/SlowTransactions";
 import { ChangeFailureRate } from "@/components/dashboard/ChangeFailureRate";
+import { ChangeSuccessRate } from "@/components/dashboard/ChangeSuccessRate";
 import { AlertsPanel } from "@/components/dashboard/AlertsPanel";
 import { InsightBanner } from "@/components/agent/InsightBanner";
 import { ACCENTS, type DashboardData, type AgentInsight } from "@/lib/types";
@@ -18,47 +14,53 @@ import { ACCENTS, type DashboardData, type AgentInsight } from "@/lib/types";
 export function OverviewView({
   data,
   insights,
-  onAsk,
 }: {
   data: DashboardData;
   insights: AgentInsight[] | null;
-  onAsk: (q: string) => void;
 }) {
+  // Row 1 KPIs — Apps, Availability, Incidents, Deployments.
+  const rowOneKeys = ["apps", "avail", "inc", "dep"];
+  const rowOneKpis = rowOneKeys
+    .map((k) => data.kpis.find((kpi) => kpi.key === k))
+    .filter((k): k is NonNullable<typeof k> => Boolean(k));
+
   return (
     <>
-      {insights && insights.length > 0 && <InsightBanner insights={insights} onAsk={onAsk} />}
+      {insights && insights.length > 0 && <InsightBanner insights={insights} />}
 
-      <KpiRow kpis={data.kpis} />
+      {/* Row 1 — headline counts */}
+      <KpiRow kpis={rowOneKpis} gridClassName="grid-cols-2 xl:grid-cols-4" />
 
-      <div className="mb-3 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-[1.35fr_1fr_1fr_1fr]">
-        <SloPanel slo={data.slo} />
+      {/* Row 2 — app distribution donuts + availability trend */}
+      <div className="mb-3 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+        <CategoryDonut title="Applications by Medal" data={data.appsByTier} />
+        <CategoryDonut title="Applications by Availability" data={data.appsByAvailability} />
         <TrendPanel title="Availability Over Time" series={data.availability} color={ACCENTS.blue} legend="Availability (%)" />
-        <TrendPanel title="Error Rate Over Time" series={data.errorRate} color={ACCENTS.red} legend="Error Rate (%)" />
-        <TrendPanel title="Latency (P95) Over Time" series={data.latency} color={ACCENTS.purple} legend="P95 Latency (ms)" />
       </div>
 
-      <div className="mb-3 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-[1.9fr_0.9fr_1fr_0.9fr]">
-        <HealthTable rows={data.health} />
+      {/* Row 3 — incidents + change health + P1/P2 incidents */}
+      <div className="mb-3 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <IncidentsDonut buckets={data.incidentsBySeverity} total={data.incidentsTotal} />
-        <IncidentsOverTime data={data.incidentsOverTime} />
-        <TopErrorTypes rows={data.errorTypes} />
-      </div>
-
-      <div className="mb-3 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-5">
-        <InfraHealth metrics={data.infra} />
-        <ApdexGauge value={data.apdex} />
-        <SlowTransactions rows={data.slowTransactions} />
+        <ChangeSuccessRate
+          value={data.changeSuccessRate.value}
+          delta={data.changeSuccessRate.delta}
+          series={data.changeSuccessRate.series}
+        />
         <ChangeFailureRate
           value={data.changeFailureRate.value}
           delta={data.changeFailureRate.delta}
           series={data.changeFailureRate.series}
         />
-        <AlertsPanel alerts={data.alerts} />
+        <AlertsPanel alerts={data.criticalIncidents} title="P1 / P2 Incidents" linkText="View all incidents →" />
+      </div>
+
+      {/* Row 4 — per-application operational health */}
+      <div className="mb-3">
+        <HealthByApplication rows={data.healthOps} />
       </div>
 
       <div className="flex flex-wrap gap-4 px-1 pt-1 text-[10.5px] text-ink-faint">
         <span><b className="text-ink-muted">All times shown in IST</b></span>
-        <span><b className="text-ink-muted">SLO Compliance</b> = % of time SLO was met</span>
         <span><b className="text-ink-muted">Availability</b> = (Total Time − Downtime) / Total Time</span>
       </div>
     </>

@@ -9,7 +9,10 @@ import type {
   TimeSeries,
   InfraMetric,
   SlowTransaction,
+  CategoryDatum,
+  AppOpsRow,
 } from "@/lib/types";
+import { TIER_COLORS, STATUS_COLORS } from "@/lib/types";
 
 // ---------------------------------------------------------------------------
 // Build a DashboardData payload from the REAL stored applications so every
@@ -124,6 +127,44 @@ export function buildDashboardFromApps(
 
   const slo: SloCompliance[] = worst.map((s) => ({ name: s.name, value: s.slo }));
 
+  // Applications grouped by medal tier (from the real stored inventory).
+  const tierOrder = ["Gold", "Silver", "Bronze"];
+  const tierCounts = apps.reduce((a, app) => {
+    const key = tierOrder.includes(app.tier) ? app.tier : "Bronze";
+    a[key] = (a[key] ?? 0) + 1;
+    return a;
+  }, {} as Record<string, number>);
+  const appsByTier: CategoryDatum[] = tierOrder
+    .map((name) => ({ name, count: tierCounts[name] ?? 0, color: TIER_COLORS[name] }))
+    .filter((d) => d.count > 0);
+
+  // Applications grouped by availability status (from synthesized health).
+  const statusOrder: HealthStatus[] = ["Healthy", "Warning", "Critical"];
+  const statusCounts = synth.reduce((a, s) => {
+    a[s.status] = (a[s.status] ?? 0) + 1;
+    return a;
+  }, {} as Record<HealthStatus, number>);
+  const appsByAvailability: CategoryDatum[] = statusOrder
+    .map((name) => ({ name, count: statusCounts[name] ?? 0, color: STATUS_COLORS[name] }))
+    .filter((d) => d.count > 0);
+
+  // Per-app operational health — job / interface / health-check statuses derived
+  // deterministically from each app's overall status with a little jitter.
+  const jitterStatus = (base: HealthStatus, seed: string): HealthStatus => {
+    const r = rng(`ops:${seed}`)();
+    if (base === "Healthy") return r > 0.82 ? "Warning" : "Healthy";
+    if (base === "Warning") return r > 0.7 ? "Critical" : r < 0.25 ? "Healthy" : "Warning";
+    return r < 0.25 ? "Warning" : "Critical";
+  };
+  const healthOps: AppOpsRow[] = worst.map((s) => ({
+    app: s.name,
+    availability: `${s.av.toFixed(2)}%`,
+    jobStatus: jitterStatus(s.status, `${s.name}:job`),
+    serviceStatus: jitterStatus(s.status, `${s.name}:svc`),
+    healthCheckStatus: jitterStatus(s.status, `${s.name}:hc`),
+    status: s.status,
+  }));
+
   const kpis = base.kpis.map((k) => {
     switch (k.key) {
       case "apps":
@@ -189,6 +230,19 @@ export function buildDashboardFromApps(
     series: genSeries(base.changeFailureRate.series, cfrVal, Math.max(0.8, cfrVal * 0.35), `cfr:${seedKey}`),
   };
 
+  // Change success rate is the complement of the failure rate.
+  const csrVal = +clamp(100 - cfrVal, 0, 100).toFixed(1);
+  const changeSuccessRate = {
+    value: `${csrVal}%`,
+    delta: base.changeSuccessRate.delta,
+    series: {
+      ...changeFailureRate.series,
+      min: 85,
+      max: 100,
+      points: changeFailureRate.series.points.map((p) => ({ t: p.t, value: +(100 - p.value).toFixed(2) })),
+    },
+  };
+
   // Slow transactions scaled by how the selection's latency compares to nominal.
   const latRatio = clamp(latAvg / 312, 0.4, 2.5);
   const slowTransactions: SlowTransaction[] = base.slowTransactions.map((t) => ({
@@ -210,6 +264,20 @@ export function buildDashboardFromApps(
       time: `${(i + 1) * 7}m ago`,
     }));
 
+  // P1/P2 incident descriptions from the least-healthy selected apps.
+  const criticalIncidents: AlertItem[] = worst
+    .filter((s) => s.status !== "Healthy")
+    .slice(0, 5)
+    .map((s, i) => ({
+      id: `inc${i}`,
+      severity: (s.status === "Critical" ? "P1" : "P2") as Severity,
+      text:
+        s.status === "Critical"
+          ? `${s.name} — availability ${s.av.toFixed(2)}%, error rate ${s.err.toFixed(2)}% (below target)`
+          : `${s.name} — P95 latency ${s.lat} ms elevated, error rate ${s.err.toFixed(2)}%`,
+      time: `${(i + 1) * 12}m ago`,
+    }));
+
   const apdex = +clamp((avAvg - 98) / 2 - errAvg * 0.05, 0.6, 0.99).toFixed(2);
 
   return {
@@ -217,6 +285,11 @@ export function buildDashboardFromApps(
     kpis,
     slo,
     health,
+    appsByTier,
+    appsByAvailability,
+    healthOps,
+    criticalIncidents: criticalIncidents.length ? criticalIncidents : base.criticalIncidents.slice(0, 1),
+    changeSuccessRate,
     availability,
     errorRate,
     latency,

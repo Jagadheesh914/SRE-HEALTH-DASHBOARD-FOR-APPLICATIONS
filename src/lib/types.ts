@@ -71,6 +71,27 @@ export interface AppHealthRow {
   status: HealthStatus;
 }
 
+/** A labelled slice for a category donut (e.g. apps by tier / by availability). */
+export interface CategoryDatum {
+  name: string;
+  count: number;
+  color: string;
+}
+
+/** Operational health of one application across its monitored surfaces. */
+export interface AppOpsRow {
+  app: string;
+  availability: string;
+  /** Batch / scheduled job health. */
+  jobStatus: HealthStatus;
+  /** Interface / service (API dependency) health. */
+  serviceStatus: HealthStatus;
+  /** Synthetic health-check / heartbeat status. */
+  healthCheckStatus: HealthStatus;
+  /** Overall roll-up status. */
+  status: HealthStatus;
+}
+
 export interface IncidentBucket {
   severity: Severity;
   label: string;
@@ -125,6 +146,14 @@ export interface DashboardData {
   errorRate: TimeSeries;
   latency: TimeSeries;
   health: AppHealthRow[];
+  /** Applications grouped by medal tier (Gold / Silver / Bronze). */
+  appsByTier: CategoryDatum[];
+  /** Applications grouped by availability status (Healthy / Warning / Critical). */
+  appsByAvailability: CategoryDatum[];
+  /** Per-application operational health for the "Health by Application" table. */
+  healthOps: AppOpsRow[];
+  /** P1/P2 incident descriptions surfaced in the Overview "Incidents" panel. */
+  criticalIncidents: AlertItem[];
   incidentsBySeverity: IncidentBucket[];
   incidentsTotal: number;
   incidentsOverTime: IncidentTimePoint[];
@@ -133,8 +162,23 @@ export interface DashboardData {
   apdex: number;
   slowTransactions: SlowTransaction[];
   changeFailureRate: { value: string; delta: string; series: TimeSeries };
+  changeSuccessRate: { value: string; delta: string; series: TimeSeries };
   alerts: AlertItem[];
 }
+
+/** Shared color tokens for the medal tiers, used by tier donuts/badges. */
+export const TIER_COLORS: Record<string, string> = {
+  Gold: "#e8a33d",
+  Silver: "#8494b8",
+  Bronze: "#c67b45",
+};
+
+/** Shared color tokens for health statuses, used by donuts/tables. */
+export const STATUS_COLORS: Record<HealthStatus, string> = {
+  Healthy: "#16a34a",
+  Warning: "#d97706",
+  Critical: "#e0384a",
+};
 
 // ------- Agent (chat / insights) contracts -------
 
