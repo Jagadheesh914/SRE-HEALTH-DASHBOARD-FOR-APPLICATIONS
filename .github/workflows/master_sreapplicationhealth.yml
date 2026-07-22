@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '24.x'
 
@@ -30,17 +30,17 @@ jobs:
 
       - name: Zip deployment package (includes hidden .next dir)
         run: |
-          zip -r ../app.zip . \
+          zip -r app.zip . \
             --exclude "node_modules/*" \
             --exclude ".git/*" \
-            --exclude ".github/*"
-        working-directory: ${{ github.workspace }}
+            --exclude ".github/*" \
+            --exclude "app.zip"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: ../app.zip
+          path: app.zip
 
   deploy:
     runs-on: ubuntu-latest
