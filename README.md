@@ -8,6 +8,8 @@ It mirrors the reliability/performance/UX overview of the original static mockup
 
 ```bash
 npm install
+
+
 npm run dev
 # open http://localhost:3000
 ```
