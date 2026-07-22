@@ -29,11 +29,16 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
+      - name: Copy static assets into standalone output
+        run: |
+          cp -r .next/static .next/standalone/.next/static
+          cp -r public .next/standalone/public
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: .
+          path: .next/standalone
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,4 +57,5 @@ jobs:
           app-name: 'SreApplicationHealth'
           slot-name: 'Production'
           package: .
+          startup-command: 'node server.js'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1142369717894097A1756DB88DACC2A0 }}
